@@ -1,0 +1,16 @@
+version: "1"
+project:
+  name: java-example-project
+  branch: master
+  revision:
+    name: 123
+    date: 2017-05-30T13:25:30Z
+capture:
+  build:
+    coverity:
+analyze:
+  mode: central
+install:
+  coverity:
+    version: default
+serverUrl: https://sipse.polaris.synopsys.com

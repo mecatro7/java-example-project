@@ -1,0 +1,20 @@
+{
+    "data":{
+        "polaris": {
+            "application": {
+                "name": "gwyi-Applicaiton4"
+            },
+            "project": {
+                "name": "java-example-project"
+            },
+            "branch": {
+                "name": "main"
+            },
+            "assessment": {
+                "types": ["SAST"]
+            },
+            "serverUrl": "https://poc.polaris.blackduck.com"
+        }
+    }
+
+}

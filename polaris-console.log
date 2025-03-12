@@ -1,0 +1,203 @@
+giwoong@azure-coverity2:~/labs/java-example-project$ bridge-cli --stage polaris --input inputFile.json
+2025-03-12 13:13:27.8253 UTC [Bridge CLI] INFO: Using cache directory: /datadrive/work/bridge-cli-bundle-3.2.0-linux64
+2025-03-12 13:13:27.8255 UTC [Bridge CLI] INFO: Found version "3.0.42" in registry for workflow "polaris", trying to load it from local cache
+2025-03-12 13:13:28.0310 UTC [Environment Variable] INFO: Provided value for resource 'POLARIS.ACCESSTOKEN'
+2025-03-12 13:13:28.0341 UTC [--input] INFO: Provided value for resource 'polaris.application.name'
+2025-03-12 13:13:28.0342 UTC [--input] INFO: Provided value for resource 'polaris.project.name'
+2025-03-12 13:13:28.0343 UTC [--input] INFO: Provided value for resource 'polaris.branch.name'
+2025-03-12 13:13:28.0344 UTC [--input] INFO: Added entry to resource 'polaris.assessment.types'
+2025-03-12 13:13:28.0345 UTC [--input] INFO: Provided value for resource 'polaris.serverUrl'
+2025-03-12 13:13:28.0346 UTC [Bridge CLI] INFO: Starting adapters for stage polaris
+2025-03-12 13:13:28.0358 UTC [Bridge CLI] INFO: Starting Adapter: Polaris Status Provider
+2025-03-12 13:13:28.0358 UTC [Bridge CLI] INFO: Starting Adapter: Polaris SCM Discovery
+2025-03-12 13:13:28.0359 UTC [Bridge CLI] INFO: Starting Adapter: Polaris Controller
+2025-03-12 13:13:28.0358 UTC [Bridge CLI] INFO: Starting Adapter: Polaris Initializer
+2025-03-12 13:13:28.0412 UTC [Bridge CLI] INFO: Starting Adapter: Set Polaris Wait For Scan
+2025-03-12 13:13:28.0413 UTC [Set Polaris Wait For Scan] INFO: Provided value for resource 'polaris.waitForScan'
+2025-03-12 13:13:28.0414 UTC [Set Polaris Wait For Scan] INFO: Adapter finished
+2025-03-12 13:13:28.0586 UTC [Polaris SCM Discovery] INFO: Adapter finished
+2025-03-12 13:13:28.0609 UTC [Bridge CLI] INFO: Starting Adapter: Set Polaris Assessment Mode to CI
+2025-03-12 13:13:28.0610 UTC [Set Polaris Assessment Mode to CI] INFO: Provided value for resource 'polaris.assessment.mode'
+2025-03-12 13:13:28.0611 UTC [Set Polaris Assessment Mode to CI] INFO: Adapter finished
+2025-03-12 13:13:28.0630 UTC [Bridge CLI] INFO: Starting Adapter: Create Polaris Project & Branch By Default
+2025-03-12 13:13:28.0631 UTC [Create Polaris Project & Branch By Default] INFO: Provided value for resource 'polaris.onboarding'
+2025-03-12 13:13:28.0631 UTC [Create Polaris Project & Branch By Default] INFO: Adapter finished
+2025-03-12 13:13:29.0831 UTC [Polaris Initializer] INFO: Successfully created test for "SAST" assessment. The short test ID is "HI4KY5M"
+2025-03-12 13:13:29.0882 UTC [Polaris Initializer] INFO: Provided value for resource 'polaris.test.SAST.id'
+2025-03-12 13:13:29.0883 UTC [Polaris Initializer] INFO: Provided value for resource 'polaris.test.SAST.shortId'
+2025-03-12 13:13:29.0884 UTC [Polaris Initializer] INFO: Provided value for resource 'polaris.test.SAST.streamId'
+2025-03-12 13:13:29.0885 UTC [Polaris Initializer] INFO: Provided value for resource 'polaris.project.id'
+2025-03-12 13:13:29.0886 UTC [Polaris Initializer] INFO: Provided value for resource 'polaris.branch.id'
+2025-03-12 13:13:29.0887 UTC [Polaris Initializer] INFO: Provided value for resource 'polaris.portfolioid'
+2025-03-12 13:13:29.0888 UTC [Polaris Initializer] INFO: Provided value for resource 'polaris.application.id'
+2025-03-12 13:13:29.0889 UTC [Polaris Initializer] INFO: Adapter finished
+2025-03-12 13:13:29.0960 UTC [Bridge CLI] INFO: Starting Adapter: Check pull request
+2025-03-12 13:13:29.1052 UTC [Check pull request] INFO: Provided value for resource 'environment.scan.pull'
+2025-03-12 13:13:29.1053 UTC [Check pull request] INFO: Adapter finished
+2025-03-12 13:13:29.1105 UTC [Polaris Controller] INFO: fetching recommended "coverity" tool info...
+2025-03-12 13:13:29.3079 UTC [Polaris Controller] INFO: checking "coverity" tool installation inside bridge home directory: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0
+2025-03-12 13:13:29.3892 UTC [Polaris Controller] INFO: "coverity" tool is already installed...
+2025-03-12 13:13:29.3937 UTC [Polaris Controller] INFO: Provided value for resource 'coverity.id'
+2025-03-12 13:13:29.3940 UTC [Bridge CLI] INFO: Starting adapters for stage polaris-sast
+2025-03-12 13:13:29.3940 UTC [Bridge CLI] INFO: Starting adapters for stage polaris-artifacts-uploader
+2025-03-12 13:13:29.3940 UTC [Bridge CLI] INFO: Starting adapters for stage polaris-post-processing
+2025-03-12 13:13:29.3950 UTC [Bridge CLI] INFO: Starting Adapter: Polaris Coverity Capture
+2025-03-12 13:13:29.3951 UTC [Bridge CLI] INFO: Starting Adapter: Polaris Issues Fetcher
+2025-03-12 13:13:29.3951 UTC [Bridge CLI] INFO: Starting Adapter: Polaris Artifacts Uploader
+2025-03-12 13:13:29.3951 UTC [Bridge CLI] INFO: Starting Adapter: Polaris Waiter
+2025-03-12 13:13:29.3951 UTC [Bridge CLI] INFO: Starting Adapter: Polaris Policy Checker
+2025-03-12 13:13:29.3952 UTC [Polaris Controller] INFO: Adapter finished
+2025-03-12 13:13:29.4075 UTC [Bridge CLI] INFO: Starting Adapter: Default Adapter for execution path
+2025-03-12 13:13:29.4078 UTC [Default Adapter for execution path] INFO: Provided value for resource 'coverity.execution.path'
+2025-03-12 13:13:29.4078 UTC [Default Adapter for execution path] INFO: Adapter finished
+2025-03-12 13:13:29.4211 UTC [Polaris Coverity Capture] INFO: Identified workflow: Polaris
+2025-03-12 13:13:29.4212 UTC [Polaris Coverity Capture] INFO: command: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/coverity capture --dir /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir -o analyze.location=connect
+2025-03-12 13:13:29.4297 UTC [Polaris Coverity Capture] INFO: coverity 2024.12.0 covcli-2024.12-push-14
+2025-03-12 13:13:29.4298 UTC [Polaris Coverity Capture] INFO: envvar: COVERITY_CACHE_API_TOKEN_FILE=/tmp/polaris_coverity_cache3043101183/.authKey
+2025-03-12 13:13:29.4298 UTC [Polaris Coverity Capture] INFO: envvar: COVERITY_CACHE_KEY=a75296bc-5295-4772-8dcb-4d10c5317729
+2025-03-12 13:13:29.4299 UTC [Polaris Coverity Capture] INFO: envvar: COVERITY_CACHE_URL=https://poc.polaris.blackduck.com/api/cache
+2025-03-12 13:13:29.4299 UTC [Polaris Coverity Capture] INFO: envvar: COVERITY_CLI_CAPTURE_ZIP_ARCHIVE=/home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir.zip
+2025-03-12 13:13:29.4299 UTC [Polaris Coverity Capture] INFO: envvar: COVERITY_CLI_POLARIS_CLIENT=true
+2025-03-12 13:13:29.4300 UTC [Polaris Coverity Capture] INFO: Loaded configuration file '/home/giwoong/labs/java-example-project/coverity.yaml'
+2025-03-12 13:13:29.4309 UTC [Polaris Coverity Capture] INFO: Executing command: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-manage-emit --dir /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir reset-host-name
+2025-03-12 13:13:29.4341 UTC [Polaris Coverity Capture] INFO: Executing command: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-manage-emit --dir /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir check-compatible
+2025-03-12 13:13:29.4381 UTC [Polaris Coverity Capture] INFO: Detected that stdout is not connected to a terminal.  Defaulting ticker mode to 'none'.
+2025-03-12 13:13:29.4381 UTC [Polaris Coverity Capture] INFO: If this is not correct, explicitly set the ticker mode to the desired value using the '--ticker-mode' option.
+2025-03-12 13:13:29.4387 UTC [Polaris Coverity Capture] INFO: Using lightweight capture with thin client.
+2025-03-12 13:13:29.4388 UTC [Polaris Coverity Capture] INFO: Executing command: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-internal-manage-cache check
+2025-03-12 13:13:29.6826 UTC [Polaris Coverity Capture] INFO: Caching is enabled.
+2025-03-12 13:13:29.6827 UTC [Polaris Coverity Capture] INFO: Executing command: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-manage-emit --dir /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir create
+2025-03-12 13:13:29.6869 UTC [Polaris Coverity Capture] INFO: Telemetry is enabled
+2025-03-12 13:13:29.6876 UTC [Polaris Coverity Capture] INFO: Executing command: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-manage-emit --dir /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir list-capture-diagnostics
+2025-03-12 13:13:29.6911 UTC [Polaris Coverity Capture] INFO: Executing action Delete compiler configurations for intermediate directory '/home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir'
+2025-03-12 13:13:29.6950 UTC [Polaris Coverity Capture] INFO: Executing action Configure build compiler: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml --compiler gcc --comptype gcc --template
+2025-03-12 13:13:29.9233 UTC [Polaris Coverity Capture] INFO: Executing action Configure build compiler: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml --compiler cc --comptype gcc --template
+2025-03-12 13:13:30.1545 UTC [Polaris Coverity Capture] WARNING: Template config template-gcc-config-1 already exists for gcc-* and will be reused.
+2025-03-12 13:13:30.1546 UTC [Polaris Coverity Capture] WARNING: Template config template-gcc-config-2 already exists for *-gcc and will be reused.
+2025-03-12 13:13:30.1546 UTC [Polaris Coverity Capture] WARNING: Template config template-g++-config-1 already exists for g++-* and will be reused.
+2025-03-12 13:13:30.1547 UTC [Polaris Coverity Capture] WARNING: Template config template-g++-config-2 already exists for *-g++ and will be reused.
+2025-03-12 13:13:30.1547 UTC [Polaris Coverity Capture] WARNING: Template config template-ld-config-0 already exists for ld and will be reused.
+2025-03-12 13:13:30.1547 UTC [Polaris Coverity Capture] WARNING: Template config template-ar-config-0 already exists for ar and will be reused.
+2025-03-12 13:13:30.1590 UTC [Polaris Coverity Capture] INFO: Executing action Configure build compiler: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml --compiler c++ --comptype g++ --template
+2025-03-12 13:13:30.3953 UTC [Polaris Coverity Capture] INFO: Executing action Configure build compiler: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml --compiler clang --comptype clangcc --template
+2025-03-12 13:13:30.6272 UTC [Polaris Coverity Capture] INFO: Executing action Configure build compiler: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml --compiler java --comptype java --template
+2025-03-12 13:13:30.8619 UTC [Polaris Coverity Capture] INFO: Executing action Configure build compiler: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml --compiler go --comptype go --template
+2025-03-12 13:13:31.0981 UTC [Polaris Coverity Capture] INFO: Executing action Configure build compiler: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml --compiler ccache --comptype prefix --template
+2025-03-12 13:13:31.3348 UTC [Polaris Coverity Capture] INFO: Executing action Configure build compiler: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml --compiler kotlinc --comptype kotlinc --template
+2025-03-12 13:13:31.5685 UTC [Polaris Coverity Capture] WARNING: Template config template-java-config-0 already exists for java and will be reused.
+2025-03-12 13:13:31.5686 UTC [Polaris Coverity Capture] WARNING: Template config template-apt-config-0 already exists for apt and will be reused.
+2025-03-12 13:13:31.5686 UTC [Polaris Coverity Capture] WARNING: Template config template-javaw-config-0 already exists for javaw and will be reused.
+2025-03-12 13:13:31.5728 UTC [Polaris Coverity Capture] INFO: Executing action Configure build compiler: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml --compiler csc --comptype csc --template
+2025-03-12 13:13:31.8132 UTC [Polaris Coverity Capture] INFO: Executing action Configure build compiler: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml --compiler vbc --comptype vbc --template
+2025-03-12 13:13:32.0547 UTC [Polaris Coverity Capture] WARNING: Template config template-dotnet-config-0 already exists for dotnet and will be reused.
+2025-03-12 13:13:32.0588 UTC [Polaris Coverity Capture] INFO: Executing action Configure build compiler: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml --compiler cl --comptype msvc --template
+2025-03-12 13:13:32.3056 UTC [Polaris Coverity Capture] INFO: Executing action Configure build compiler: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir/coverity-cli/buildless-compiler-configs/coverity_config.xml --dart
+2025-03-12 13:13:32.5307 UTC [Polaris Coverity Capture] INFO: Executing action Configure build compiler: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir/coverity-cli/buildless-compiler-configs/coverity_config.xml --javascript
+2025-03-12 13:13:32.7592 UTC [Polaris Coverity Capture] INFO: Executing action Configure build compiler: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir/coverity-cli/buildless-compiler-configs/coverity_config.xml --php
+2025-03-12 13:13:32.9901 UTC [Polaris Coverity Capture] INFO: Executing action Configure build compiler: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir/coverity-cli/buildless-compiler-configs/coverity_config.xml --python
+2025-03-12 13:13:33.2202 UTC [Polaris Coverity Capture] INFO: Executing action Configure build compiler: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir/coverity-cli/buildless-compiler-configs/coverity_config.xml --ruby
+2025-03-12 13:13:33.4524 UTC [Polaris Coverity Capture] INFO: Executing action Configure build compiler: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir/coverity-cli/buildless-compiler-configs/coverity_config.xml --comptype capture-config-files --file-regex $capture-config-files$ --template
+2025-03-12 13:13:33.4613 UTC [Polaris Coverity Capture] WARNING: Configuration already exists for file regex $capture-config-files$
+2025-03-12 13:13:33.4614 UTC [Polaris Coverity Capture] INFO:           and it will not be updated.
+2025-03-12 13:13:33.4620 UTC [Polaris Coverity Capture] INFO: Loading compiler config '/home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml'
+2025-03-12 13:13:33.4644 UTC [Polaris Coverity Capture] INFO: Loading compiler config '/home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir/coverity-cli/buildless-compiler-configs/coverity_config.xml'
+2025-03-12 13:13:33.4657 UTC [Polaris Coverity Capture] INFO: Executing action Execute clean command: sh -c ./gradlew clean
+2025-03-12 13:13:33.9377 UTC [Polaris Coverity Capture] INFO: > Task :app:clean UP-TO-DATE
+2025-03-12 13:13:33.9378 UTC [Polaris Coverity Capture] INFO:
+2025-03-12 13:13:33.9378 UTC [Polaris Coverity Capture] INFO: BUILD SUCCESSFUL in 420ms
+2025-03-12 13:13:33.9379 UTC [Polaris Coverity Capture] INFO: 1 actionable task: 1 up-to-date
+2025-03-12 13:13:33.9433 UTC [Polaris Coverity Capture] INFO: Executing action Invoke build capture: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-build --dir /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir -c /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml --append-log --no-security-da --record-with-source --no-xrefs --enable-scan-transparency-data --bytecode-caching sh -c ./gradlew build
+2025-03-12 13:13:33.9458 UTC [Polaris Coverity Capture] INFO: Coverity Build Capture (64-bit) version 2024.12.0 on Linux 6.8.0-1021-azure x86_64
+2025-03-12 13:13:33.9459 UTC [Polaris Coverity Capture] INFO: Internal version numbers: 1698eb2daa p-2024.12-push-32
+2025-03-12 13:13:33.9459 UTC [Polaris Coverity Capture] INFO:
+2025-03-12 13:13:33.9706 UTC [Polaris Coverity Capture] INFO:
+2025-03-12 13:13:35.3742 UTC [Polaris Coverity Capture] INFO: To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.8/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+2025-03-12 13:13:36.0732 UTC [Polaris Coverity Capture] INFO: Daemon will be stopped at the end of the build
+2025-03-12 13:13:42.1748 UTC [Polaris Coverity Capture] INFO: > Task :app:compileJava
+2025-03-12 13:13:42.1749 UTC [Polaris Coverity Capture] INFO: > Task :app:processResources NO-SOURCE
+2025-03-12 13:13:42.1749 UTC [Polaris Coverity Capture] INFO: > Task :app:classes
+2025-03-12 13:13:42.2731 UTC [Polaris Coverity Capture] INFO: > Task :app:jar
+2025-03-12 13:13:42.6731 UTC [Polaris Coverity Capture] INFO: > Task :app:startScripts
+2025-03-12 13:13:42.6732 UTC [Polaris Coverity Capture] INFO: > Task :app:distTar
+2025-03-12 13:13:42.8731 UTC [Polaris Coverity Capture] INFO: > Task :app:distZip
+2025-03-12 13:13:42.8732 UTC [Polaris Coverity Capture] INFO: > Task :app:assemble
+2025-03-12 13:13:43.7731 UTC [Polaris Coverity Capture] INFO: > Task :app:compileTestJava
+2025-03-12 13:13:43.7732 UTC [Polaris Coverity Capture] INFO: > Task :app:processTestResources NO-SOURCE
+2025-03-12 13:13:43.7732 UTC [Polaris Coverity Capture] INFO: > Task :app:testClasses
+2025-03-12 13:13:44.3731 UTC [Polaris Coverity Capture] INFO: > Task :app:test
+2025-03-12 13:13:44.3732 UTC [Polaris Coverity Capture] INFO: > Task :app:check
+2025-03-12 13:13:44.3732 UTC [Polaris Coverity Capture] INFO: > Task :app:build
+2025-03-12 13:13:44.3734 UTC [Polaris Coverity Capture] INFO:
+2025-03-12 13:13:44.3734 UTC [Polaris Coverity Capture] INFO: BUILD SUCCESSFUL in 9s
+2025-03-12 13:13:44.3735 UTC [Polaris Coverity Capture] INFO: 7 actionable tasks: 7 executed
+2025-03-12 13:13:44.9555 UTC [Polaris Coverity Capture] INFO: Attempting to detect unconfigured compilers in build
+2025-03-12 13:13:44.9592 UTC [Polaris Coverity Capture] INFO: |0----------25-----------50----------75---------100|
+2025-03-12 13:13:44.9813 UTC [Polaris Coverity Capture] INFO: ****************************************************
+2025-03-12 13:13:44.9869 UTC [Polaris Coverity Capture] INFO: Recorded 7 Java compilation units (100%) successfully. These compilation units are ready for replay
+2025-03-12 13:13:44.9869 UTC [Polaris Coverity Capture] INFO:
+2025-03-12 13:13:44.9869 UTC [Polaris Coverity Capture] INFO: The cov-build utility completed successfully.
+2025-03-12 13:13:45.0686 UTC [Polaris Coverity Capture] INFO: Executing action Collect Build Metrics
+2025-03-12 13:13:45.0687 UTC [Polaris Coverity Capture] INFO: Executing action Invalidate capture results
+2025-03-12 13:13:45.0687 UTC [Polaris Coverity Capture] INFO: Executing action Update uncaptured file timestamps for project "/home/giwoong/labs/java-example-project"
+2025-03-12 13:13:45.0687 UTC [Polaris Coverity Capture] INFO: Executing command: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-manage-emit --dir /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir list-capture-diagnostics
+2025-03-12 13:13:45.1112 UTC [Polaris Coverity Capture] INFO: Executing action Emit files using buildless capture: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-internal-capture-files --dir /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir -c /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir/coverity-cli/buildless-compiler-configs/coverity_config.xml --ticker-mode none --append-log --capture-list-file /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir/coverity-cli/capture-file-list-1083728170 --record-with-source
+2025-03-12 13:13:45.1625 UTC [Polaris Coverity Capture] INFO: Buildless capture started.
+2025-03-12 13:13:45.1729 UTC [Polaris Coverity Capture] INFO: Emitting 21 Files.
+2025-03-12 13:13:45.5972 UTC [Polaris Coverity Capture] INFO: Buildless capture completed.
+2025-03-12 13:13:45.5984 UTC [Polaris Coverity Capture] INFO: Executing action deleteResidualTUs /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir
+2025-03-12 13:13:45.5984 UTC [Polaris Coverity Capture] INFO: Executing command: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-manage-emit --dir /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir list-capture-diagnostics
+2025-03-12 13:13:45.6394 UTC [Polaris Coverity Capture] INFO: Executing action Invalidate capture results
+2025-03-12 13:13:45.6412 UTC [Polaris Coverity Capture] INFO: Executing command: /home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/cov-manage-emit --dir /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir list-capture-diagnostics
+2025-03-12 13:13:45.6821 UTC [Polaris Coverity Capture] INFO: Capture summary:
+2025-03-12 13:13:45.6822 UTC [Polaris Coverity Capture] INFO:     SUCCEEDED: 57
+2025-03-12 13:13:45.6822 UTC [Polaris Coverity Capture] INFO:     INCOMPLETE: 0
+2025-03-12 13:13:45.6822 UTC [Polaris Coverity Capture] INFO:     FAILED: 0
+2025-03-12 13:13:45.6822 UTC [Polaris Coverity Capture] INFO:     IGNORED: 12
+2025-03-12 13:13:45.6823 UTC [Polaris Coverity Capture] INFO:     FILES CAPTURED: 57
+2025-03-12 13:13:45.6823 UTC [Polaris Coverity Capture] INFO:     LINES OF CODE: 877
+2025-03-12 13:13:45.6823 UTC [Polaris Coverity Capture] INFO: Capture phase took 16s.
+2025-03-12 13:13:47.1273 UTC [Polaris Coverity Capture] INFO: To analyze your project, type '/home/giwoong/.blackduck/bridge/tools/cov-thin-client/2024.12.0/bin/coverity analyze --dir /home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir -o analyze.location=connect'.
+2025-03-12 13:13:47.1332 UTC [Polaris Coverity Capture] INFO: Provided value for resource 'coverity.completed'
+2025-03-12 13:13:47.1333 UTC [Polaris Coverity Capture] INFO: Provided value for resource 'coverity.idir.output'
+2025-03-12 13:13:47.1337 UTC [Polaris Coverity Capture] INFO: Provided value for resource 'polaris.artifacts.coverity.path'
+2025-03-12 13:13:47.1338 UTC [Polaris Coverity Capture] INFO: Adapter finished
+2025-03-12 13:13:47.1409 UTC [Polaris Artifacts Uploader] INFO: uploading artifact for "sast" assessment with id "80bdafcd-e540-4221-bcfc-4c7ecc62f589"
+2025-03-12 13:13:47.7640 UTC [Polaris Artifacts Uploader] INFO: Uploading artifact "/home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir.zip" for "sast" assessment
+2025-03-12 13:13:47.7908 UTC [Polaris Artifacts Uploader] INFO: Uploading Progress of "sast" artifact:   0%  16384/36289707
+2025-03-12 13:13:47.9149 UTC [Polaris Artifacts Uploader] INFO: Uploading Progress of "sast" artifact:  25%  9076736/36289707
+2025-03-12 13:13:47.9792 UTC [Polaris Artifacts Uploader] INFO: Uploading Progress of "sast" artifact:  50%  18153472/36289707
+2025-03-12 13:13:48.0166 UTC [Polaris Artifacts Uploader] INFO: Uploading Progress of "sast" artifact:  75%  27230208/36289707
+2025-03-12 13:13:48.0656 UTC [Polaris Artifacts Uploader] INFO: Uploading Progress of "sast" artifact: 100%  36289707/36289707
+2025-03-12 13:13:48.4646 UTC [Polaris Artifacts Uploader] INFO: successfully uploaded artifact "/home/giwoong/labs/java-example-project/.bridge/Polaris Coverity Capture/idir.zip"
+2025-03-12 13:13:48.8300 UTC [Polaris Artifacts Uploader] INFO: successfully resumed "sast" assessment with id "80bdafcd-e540-4221-bcfc-4c7ecc62f589"
+2025-03-12 13:13:48.8348 UTC [Polaris Artifacts Uploader] INFO: Provided value for resource 'polaris.artifacts.coverity.uploadSuccessful'
+2025-03-12 13:13:48.8349 UTC [Polaris Artifacts Uploader] INFO: Adapter finished
+2025-03-12 13:13:48.8417 UTC [Polaris Waiter] INFO: Waiting for test with assessment type "sast" and id "80bdafcd-e540-4221-bcfc-4c7ecc62f589"
+2025-03-12 13:13:49.0476 UTC [Polaris Waiter] INFO: Polling Test Manager: state of test with assessment type "sast" and id "80bdafcd-e540-4221-bcfc-4c7ecc62f589" is "Waiting for Capture"
+2025-03-12 13:13:59.1602 UTC [Polaris Waiter] INFO: Polling Test Manager: state of test with assessment type "sast" and id "80bdafcd-e540-4221-bcfc-4c7ecc62f589" is "Queuing"
+2025-03-12 13:14:19.3897 UTC [Polaris Waiter] INFO: Polling Test Manager: state of test with assessment type "sast" and id "80bdafcd-e540-4221-bcfc-4c7ecc62f589" is "Scanning"
+2025-03-12 13:16:20.7218 UTC [Polaris Waiter] INFO: test with assessment type "sast" and id "80bdafcd-e540-4221-bcfc-4c7ecc62f589" completed successfully
+2025-03-12 13:16:20.7263 UTC [Polaris Waiter] INFO: Provided value for resource 'polaris.test.sast.completed'
+2025-03-12 13:16:20.9748 UTC [Polaris Waiter] INFO: Adapter finished
+2025-03-12 13:16:20.9851 UTC [Polaris Issues Fetcher] INFO: Fetching issues for "SAST" assessment
+2025-03-12 13:16:21.2801 UTC [Polaris Issues Fetcher] INFO: Successfully fetched issues for assessment type "SAST" with id "80bdafcd-e540-4221-bcfc-4c7ecc62f589"
+ {
+ "critical": 0,
+ "high": 3,
+ "informational": 0,
+ "low": 2,
+ "medium": 3
+}
+2025-03-12 13:16:21.2852 UTC [Polaris Issues Fetcher] INFO: Provided value for resource 'polaris.test.SAST.issues.critical'
+2025-03-12 13:16:21.2853 UTC [Polaris Issues Fetcher] INFO: Provided value for resource 'polaris.test.SAST.issues.low'
+2025-03-12 13:16:21.2854 UTC [Polaris Issues Fetcher] INFO: Provided value for resource 'polaris.test.SAST.issues.medium'
+2025-03-12 13:16:21.2855 UTC [Polaris Issues Fetcher] INFO: Provided value for resource 'polaris.test.SAST.issues.high'
+2025-03-12 13:16:21.2857 UTC [Polaris Issues Fetcher] INFO: Adapter finished
+2025-03-12 13:16:21.2883 UTC [Polaris Policy Checker] INFO: Checking for policy violations for "SAST" assessment...
+2025-03-12 13:16:21.6173 UTC [Polaris Policy Checker] INFO: no policies were violated to break the build
+2025-03-12 13:16:21.6219 UTC [Polaris Policy Checker] INFO: Adapter finished
+2025-03-12 13:16:21.6355 UTC [Polaris Status Provider] INFO: Results for test "SAST" with id "80bdafcd-e540-4221-bcfc-4c7ecc62f589" are available at https://poc.polaris.blackduck.com/portfolio/portfolios/a0fcefe1-1955-4a31-9ba6-e6eafc19347f/portfolio-items/b0eeb69b-64f1-4220-9a1c-f4c705dcb8bf/projects/cb8ea4fe-95b4-4677-9bb6-fc14650fb37a/tests/80bdafcd-e540-4221-bcfc-4c7ecc62f589/detected-issues
+2025-03-12 13:16:21.6356 UTC [Polaris Status Provider] INFO: Polaris issues view for project "java-example-project", branch "main" is available at https://poc.polaris.blackduck.com/portfolio/portfolios/a0fcefe1-1955-4a31-9ba6-e6eafc19347f/portfolio-items/b0eeb69b-64f1-4220-9a1c-f4c705dcb8bf/projects/cb8ea4fe-95b4-4677-9bb6-fc14650fb37a/issues?branchId=54665d3d-226a-4125-9351-75c20518af9b
+2025-03-12 13:16:21.6394 UTC [Polaris Status Provider] INFO: Provided value for resource 'polaris.test.SAST.summary.url'
+2025-03-12 13:16:21.6395 UTC [Polaris Status Provider] INFO: Provided value for resource 'polaris.project.issues.url'
+2025-03-12 13:16:21.6398 UTC [Polaris Status Provider] INFO: Adapter finished

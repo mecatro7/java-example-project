@@ -1,0 +1,138 @@
+giwoong@azure-coverity2:~/labs/java-example-project$ polaris analyze -w -- ./gradlew clean build
++-----------------------------------------------------------------------------------------------------------------------------+
+| Black Duck Coverity on Polaris Platform (TM) CLI Scan Client.                                                               |
+| Copyright ©2016-2024 Black Duck Software, Inc. All rights reserved. Black Duck® is a trademark of Black Duck Software, Inc. |
++-----------------------------------------------------------------------------------------------------------------------------+
+
+[INFO] [h9p1wjhx] Black Duck Coverity on Polaris Platform CLI Scan Client version - 2024.12.0
+[INFO] [h9p1wjhx] -------------------------------------------------------------------------------
+[INFO] [h9p1wjhx] initialize
+[INFO] [h9p1wjhx] -------------------------------------------------------------------------------
+[INFO] [h9p1wjhx] Server: https://sipse.polaris.synopsys.com
+[INFO] [h9p1wjhx] Checking for valid access token...
+[INFO] [h9p1wjhx] Access token located in file with the name '/home/giwoong/.blackduck/polaris/.access_token'
+[INFO] [h9p1wjhx] Access token ok.
+[INFO] [h9p1wjhx] Checking status...
+[INFO] [h9p1wjhx] Status ok.
+[INFO] [h9p1wjhx] Performing requested phase 'analyze' on behalf of 'giwoong' from 'sipse' organization
+[INFO] [h9p1wjhx] initialize phase took 0.802s.
+[INFO] [h9p1wjhx] -------------------------------------------------------------------------------
+[INFO] [h9p1wjhx] setup
+[INFO] [h9p1wjhx] -------------------------------------------------------------------------------
+[INFO] [h9p1wjhx] Checking if configuration file 'polaris.yml' already exists...
+[INFO] [h9p1wjhx] Configuration file already exists. Getting project name from local configuration file.
+[INFO] [h9p1wjhx] Project name java-example-project found in local configuration.
+[INFO] [h9p1wjhx] Using project name 'java-example-project', trying to fetch configuration from configuration service.
+[INFO] [h9p1wjhx] Either the project doesn't exist or the user doesn't have access to the project.
+[INFO] [h9p1wjhx] Local configuration will be used.
+[INFO] [h9p1wjhx] setup phase took 0.115s.
+[INFO] [h9p1wjhx] -------------------------------------------------------------------------------
+[INFO] [h9p1wjhx] configure
+[INFO] [h9p1wjhx] -------------------------------------------------------------------------------
+[INFO] [h9p1wjhx] Loading configuration from configuration context.
+[INFO] [h9p1wjhx] Project Directory is set to '/home/giwoong/labs/java-example-project'
+[INFO] [h9p1wjhx] Validating configuration file...
+[INFO] [h9p1wjhx] The configuration file is valid.
+[INFO] [h9p1wjhx] configure phase took 0.253s.
+[INFO] [h9p1wjhx] ===============================================================================
+[INFO] [h9p1wjhx] Executing COVERITY
+[INFO] [h9p1wjhx] -------------------------------------------------------------------------------
+[INFO] [h9p1wjhx] Coverity - install
+[INFO] [h9p1wjhx] -------------------------------------------------------------------------------
+[INFO] [h9p1wjhx] Coverity Capture tools already up-to-date.
+[INFO] [h9p1wjhx] Coverity - install phase took 0.485s.
+[INFO] [h9p1wjhx] -------------------------------------------------------------------------------
+[INFO] [h9p1wjhx] Coverity - capture
+[INFO] [h9p1wjhx] -------------------------------------------------------------------------------
+[INFO] [h9p1wjhx] Starting capture...
+[INFO] [h9p1wjhx] Writing configuration to capture directory...
+[INFO] [h9p1wjhx] Configuration written successfully.
+[INFO] [h9p1wjhx] Starting Coverity capture...
+[INFO] [h9p1wjhx] Running Coverity capture...
+[INFO] [h9p1wjhx] Running Coverity build capture...
+Coverity Build Capture (64-bit) version 2024.12.0 on Linux 6.8.0-1021-azure x86_64
+Internal version numbers: 1698eb2daa p-2024.12-push-32
+
+
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.8/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build
+> Task :app:clean
+> Task :app:compileJava
+> Task :app:processResources NO-SOURCE
+> Task :app:classes
+> Task :app:jar
+> Task :app:startScripts
+> Task :app:distTar
+> Task :app:distZip
+> Task :app:assemble
+> Task :app:compileTestJava
+> Task :app:processTestResources NO-SOURCE
+> Task :app:testClasses
+> Task :app:test
+> Task :app:check
+> Task :app:build
+
+BUILD SUCCESSFUL in 6s
+8 actionable tasks: 8 executed
+Attempting to detect unconfigured compilers in build
+|0----------25-----------50----------75---------100|
+****************************************************
+
+7 Java compilation units (100%) are ready for analysis
+The cov-build utility completed successfully.
+[INFO] [h9p1wjhx] 35 translation units were captured for Coverity analysis.
+[INFO] [h9p1wjhx] Coverity capture successful.
+[INFO] [h9p1wjhx] Capture completed successfully.
+[INFO] [h9p1wjhx] Coverity - capture phase took 10.144s.
+[INFO] [h9p1wjhx] -------------------------------------------------------------------------------
+[INFO] [h9p1wjhx] Coverity - prepare
+[INFO] [h9p1wjhx] -------------------------------------------------------------------------------
+[INFO] [h9p1wjhx] Preparing artifacts for submission...
+[INFO] [h9p1wjhx] Preparing Coverity artifacts for analysis...
+[INFO] [h9p1wjhx] Done.
+[INFO] [h9p1wjhx] Artifacts are now ready to be submitted.
+[INFO] [h9p1wjhx] Coverity - prepare phase took 0.029s.
+[INFO] [h9p1wjhx] -------------------------------------------------------------------------------
+[INFO] [h9p1wjhx] Coverity - analyze
+[INFO] [h9p1wjhx] -------------------------------------------------------------------------------
+[INFO] [h9p1wjhx] Project created in Portal with name java-example-project.
+[INFO] [h9p1wjhx] Submitting Coverity data for analysis...
+[INFO] [h9p1wjhx] Uploading ".polaris-coverity.zip": 57.614MB
+|0----------25-----------50----------75---------100|
+****************************************************
+[INFO] [h9p1wjhx] Upload finished after 0.742s (77.632MB / second)
+[INFO] [h9p1wjhx] Upload complete.
+[INFO] [h9p1wjhx] Scheduled Coverity analysis job. Job ID is '2bhda437g17ehau0n653bs9bqo'
+[INFO] [h9p1wjhx] Upload complete.
+Saving CLI Scan Job details to /home/giwoong/labs/java-example-project/.blackduck/polaris/cli-scan.json
+[INFO] [h9p1wjhx] Waiting for analysis job to finish...
+Job statuses
++-----------+--------------+----------------------------+------------------+
+| Tool Name | Tool Version | Job ID                     | Status           |
++-----------+--------------+----------------------------+------------------+
+| Coverity  | 2024.12.0    | 2bhda437g17ehau0n653bs9bqo | COMPLETED | 100% |
++-----------+--------------+----------------------------+------------------+
+
+[INFO] [h9p1wjhx] Coverity job completed successfully!
+
+[INFO] [h9p1wjhx] Coverity - analyze phase took 1m 4.543s.
+Analysis Completed.
+Coverity analysis
+{
+ "JobId": "2bhda437g17ehau0n653bs9bqo",
+ "Status": "Success"
+}
+Job issue summary
+{
+ "IssuesBySeverity": {
+  "Critical": 0,
+  "High": 3,
+  "Medium": 3,
+  "Low": 2,
+  "NotSpecified": 0
+ },
+ "Total": 8,
+ "NewIssues": 8,
+ "ClosedIssues": 0,
+ "SummaryUrl": "https://sipse.polaris.synopsys.com/projects/c81f534f-c8cb-4a5b-a5cc-a6e3a1acf90b/branches/66d0747c-c68e-4284-96a6-82df6df9c76b"
+}
