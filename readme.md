@@ -1,12 +1,36 @@
 
 # Coverity CLI
+```sh
 coverity setup
+```
+## coveirty.yaml
+```yaml
+capture:
+  build:
+    clean-command: ./gradlew clean
+    build-command: ./gradlew build
+# Specifies where the analysis results should be sent.
+commit:
 
+  # Coverity Connect configuration to use when committing defects to Coverity
+  # Connect.
+  connect:
+
+    # The name of the stream to commit the results to.
+    stream: java-example-project
+
+    # Absolute URL of where to commit the Coverity Connect results.
+    url: https://demo.coverity.synopsys.com:443
+```
+```sh
+coverity scan
+```
+## console output
+[coverity-cli-console.log](coverity-cli-console.log)
 
 # Coverity On polaris
 ```sh
 polaris setup
-polaris -w analyze -- ./gradlew clean build
 ```
 ## polaris.yml
 ```yaml
@@ -26,8 +50,13 @@ install:
   coverity:
     version: default
 serverUrl: https://sipse.polaris.synopsys.com
-
 ```
+
+```sh
+polaris -w analyze -- ./gradlew clean build
+```
+
+[CoP-console.log](CoP-console.log)
 
 # Poalris 
 ## coverity.yaml
@@ -38,7 +67,6 @@ capture:
     build-command: ./gradlew build
 ```
 ## inputFile.json
-
 ```json
 {
     "data":{
@@ -61,9 +89,9 @@ capture:
 }
 ```
 
-
-
 ```sh
 export BRIDGE_POLARIS_ACCESSTOKEN=
 bridge-cli --stage polaris --input inputFile.json
 ```
+
+[polaris-console.log](polaris-console.log)
