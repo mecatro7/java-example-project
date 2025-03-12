@@ -1,0 +1,214 @@
+coverity-cli-console.log
+
+$ coverity scan
+[INFO] coverity 2024.12.0 covcli-2024.12-push-14
+[INFO] Loaded configuration file '/home/giwoong/labs/java-example-project/coverity.yaml'
+[WARN] No setting for 'commit.connect.on-new-cert' specified.
+[WARN] Using default value of 'distrust'.
+[WARN] This may result in a certificate validation error when uploading defects to Coverity Connect.
+[WARN] If you trust the Coverity Connect instance and certificate validation fails, set 'commit.connect.on-new-cert' to 'trust'.
+[WARN] If you are unfamiliar with what this means, please talk to your Coverity Connect administrator.
+[INFO] Executing command: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-manage-emit --dir /home/giwoong/labs/java-example-project/idir reset-host-name
+[INFO] Executing command: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-manage-emit --dir /home/giwoong/labs/java-example-project/idir check-compatible
+[INFO] Creating project 'java-example-project'.
+[INFO] Creating stream 'java-example-project'.
+[INFO] Executing command: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-manage-emit --dir /home/giwoong/labs/java-example-project/idir create
+[INFO] Telemetry is enabled
+[INFO] Executing command: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-manage-emit --dir /home/giwoong/labs/java-example-project/idir list-capture-diagnostics
+[INFO] Executing action Delete compiler configurations for intermediate directory '/home/giwoong/labs/java-example-project/idir'
+[INFO] Executing action Configure build compiler: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/idir/coverity-cli/build-compiler-configs/coverity_config.xml --compiler gcc --comptype gcc --template
+[INFO] Executing action Configure build compiler: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/idir/coverity-cli/build-compiler-configs/coverity_config.xml --compiler cc --comptype gcc --template
+[WARNING] Template config template-gcc-config-1 already exists for gcc-* and will be reused.
+[WARNING] Template config template-gcc-config-2 already exists for *-gcc and will be reused.
+[WARNING] Template config template-g++-config-1 already exists for g++-* and will be reused.
+[WARNING] Template config template-g++-config-2 already exists for *-g++ and will be reused.
+[WARNING] Template config template-ld-config-0 already exists for ld and will be reused.
+[WARNING] Template config template-ar-config-0 already exists for ar and will be reused.
+[INFO] Executing action Configure build compiler: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/idir/coverity-cli/build-compiler-configs/coverity_config.xml --compiler c++ --comptype g++ --template
+[INFO] Executing action Configure build compiler: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/idir/coverity-cli/build-compiler-configs/coverity_config.xml --compiler clang --comptype clangcc --template
+[INFO] Executing action Configure build compiler: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/idir/coverity-cli/build-compiler-configs/coverity_config.xml --compiler java --comptype java --template
+[INFO] Executing action Configure build compiler: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/idir/coverity-cli/build-compiler-configs/coverity_config.xml --compiler go --comptype go --template
+[INFO] Executing action Configure build compiler: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/idir/coverity-cli/build-compiler-configs/coverity_config.xml --compiler ccache --comptype prefix --template
+[INFO] Executing action Configure build compiler: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/idir/coverity-cli/build-compiler-configs/coverity_config.xml --compiler kotlinc --comptype kotlinc --template
+[WARNING] Template config template-java-config-0 already exists for java and will be reused.
+[WARNING] Template config template-apt-config-0 already exists for apt and will be reused.
+[WARNING] Template config template-javaw-config-0 already exists for javaw and will be reused.
+[INFO] Executing action Configure build compiler: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/idir/coverity-cli/build-compiler-configs/coverity_config.xml --compiler csc --comptype csc --template
+[INFO] Executing action Configure build compiler: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/idir/coverity-cli/build-compiler-configs/coverity_config.xml --compiler vbc --comptype vbc --template
+[WARNING] Template config template-dotnet-config-0 already exists for dotnet and will be reused.
+[INFO] Executing action Configure build compiler: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/idir/coverity-cli/build-compiler-configs/coverity_config.xml --compiler cl --comptype msvc --template
+[INFO] Executing action Configure build compiler: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/idir/coverity-cli/buildless-compiler-configs/coverity_config.xml --dart
+[INFO] Executing action Configure build compiler: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/idir/coverity-cli/buildless-compiler-configs/coverity_config.xml --javascript
+[INFO] Executing action Configure build compiler: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/idir/coverity-cli/buildless-compiler-configs/coverity_config.xml --php
+[INFO] Executing action Configure build compiler: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/idir/coverity-cli/buildless-compiler-configs/coverity_config.xml --python
+[INFO] Executing action Configure build compiler: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/idir/coverity-cli/buildless-compiler-configs/coverity_config.xml --ruby
+[INFO] Executing action Configure build compiler: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/idir/coverity-cli/buildless-compiler-configs/coverity_config.xml --java-buildless
+[INFO] Executing action Configure build compiler: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/idir/coverity-cli/buildless-compiler-configs/coverity_config.xml --comptype capture-config-files --file-regex $capture-config-files$ --template
+[WARNING] Configuration already exists for file regex $capture-config-files$
+          and it will not be updated.
+[INFO] Executing action Configure build compiler: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-configure -c /home/giwoong/labs/java-example-project/idir/coverity-cli/buildless-compiler-configs/coverity_config.xml --cs-buildless
+Skipping generation of coverity scan configuration because a configuration has already been generated
+[INFO] Loading compiler config '/home/giwoong/labs/java-example-project/idir/coverity-cli/build-compiler-configs/coverity_config.xml'
+[INFO] Loading compiler config '/home/giwoong/labs/java-example-project/idir/coverity-cli/buildless-compiler-configs/coverity_config.xml'
+[INFO] Executing action Emit files using buildless capture: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-internal-capture-files --dir /home/giwoong/labs/java-example-project/idir -c /home/giwoong/labs/java-example-project/idir/coverity-cli/buildless-compiler-configs/coverity_config.xml --ticker-mode no-spin --append-log --capture-list-file /home/giwoong/labs/java-example-project/idir/coverity-cli/capture-file-list-2896960378
+[INFO] Buildless capture started.
+[INFO] Emitting 7 Files.
+|0----------25-----------50----------75---------100|
+****************************************************
+[INFO] Buildless capture completed.
+
+[INFO] Executing action deleteResidualTUs /home/giwoong/labs/java-example-project/idir
+[INFO] Executing command: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-manage-emit --dir /home/giwoong/labs/java-example-project/idir list-capture-diagnostics
+[INFO] Executing command: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-manage-emit --dir /home/giwoong/labs/java-example-project/idir @@/home/giwoong/labs/java-example-project/idir/coverity-cli/cov-manage-emit-delete-resp-1102354662 delete
+[INFO] Executing action Invalidate capture results
+[INFO] Executing action Invoke cov-security-da: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-security-da --dir /home/giwoong/labs/java-example-project/idir --ticker-mode no-spin
+[STATUS] Running security dynamic analysis...
+Looking for translation units
+|0----------25-----------50----------75---------100|
+****************************************************
+[STATUS] Preparing for bytecode analysis
+|0----------25-----------50----------75---------100|
+****************************************************
+[STATUS] Running security dynamic analysis
+|0----------25-----------50----------75---------100|
+****************************************************
+[INFO] Executing command: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-manage-emit --dir /home/giwoong/labs/java-example-project/idir list-capture-diagnostics
+Capture summary:
+    SUCCEEDED: 41
+    INCOMPLETE: 0
+    FAILED: 0
+    IGNORED: 4
+    FILES CAPTURED: 41
+    LINES OF CODE: 341
+[INFO] Capture phase took 18.836s.
+[INFO] Analyzing project locally using Coverity Analysis version 2024.12.0
+[INFO] Executing command: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-manage-emit --dir /home/giwoong/labs/java-example-project/idir list-capture-invocations
+[INFO] Executing command: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-analyze --dir /home/giwoong/labs/java-example-project/idir --strip-path /home/giwoong/labs/java-example-project --ticker-mode no-spin --android-security --webapp-security --webapp-security-aggressiveness-level low --enable-scan-transparency-data
+Coverity Static Analysis version 2024.12.0 on Linux 6.8.0-1021-azure x86_64
+Internal version numbers: 1698eb2daa p-2024.12-push-32
+
+Using 16 workers as limited by CPU(s)
+Looking for translation units
+|0----------25-----------50----------75---------100|
+****************************************************
+[STATUS] Computing links for 41 translation units
+|0----------25-----------50----------75---------100|
+****************************************************
+[STATUS] Computing virtual overrides
+|0----------25-----------50----------75---------100|
+****************************************************
+[STATUS] Running framework analysis
+|0----------25-----------50----------75---------100|
+****************************************************
+[STATUS] Computing RTA reachable from source functions
+|0----------25-----------50----------75---------100|
+****************************************************
+[WARNING] The Android Security checkers are enabled by
+--android-security, but no Android applications were captured.
+If present, the Android applications should be captured using
+Coverity CLI, for example with the command:
+%% coverity capture
+To disable this warning use the --skip-android-app-sanity-check
+option.
+[STATUS] Resolving dataflow directives
+|0----------25-----------50----------75---------100|
+****************************************************
+[STATUS] Computing callgraph
+|0----------25-----------50----------75---------100|
+****************************************************
+[STATUS] Topologically sorting 62 functions
+|0----------25-----------50----------75---------100|
+****************************************************
+[STATUS] Preparing for bytecode analysis
+|0----------25-----------50----------75---------100|
+****************************************************
+[STATUS] Running SpotBugs analysis
+Using SpotBugs 4.9.0-SNAPSHOT
+
+Scanning archives (4 / 4)
+2 analysis passes to perform
+Pass 1: Analyzing classes (28 / 28) - 100% complete
+Pass 2: Analyzing classes (7 / 7) - 100% complete
+Done with analysis
+
+SpotBugs time: 00:00:02
+****************************************************
+[STATUS] Preparing for source code analysis
+|0----------25-----------50----------75---------100|
+****************************************************
+[STATUS] Running Sigma analysis
+[STATUS] Computing node costs
+|0----------25-----------50----------75---------100|
+****************************************************
+[STATUS] Running analysis
+|0----------25-----------50----------75---------100|
+****************************************************
+[STATUS] Computing callgraph metrics for 127 functions
+|0----------25-----------50----------75---------100|
+****************************************************
+[STATUS] Exporting summaries
+|0----------25-----------50----------75---------100|
+****************************************************
+[STATUS] Calculating cross-references
+|0----------25-----------50----------75---------100|
+****************************************************
+Analysis summary report:
+------------------------
+Files analyzed                 : 12 Total
+    Java                       : 7
+    Text                       : 5
+Total LoC input to cov-analyze : 263
+Functions analyzed             : 62
+Paths analyzed                 : 530
+Time taken by analysis         : 00:00:21
+Defect occurrences found       : 6 Total
+                                 1 HARDCODED_CREDENTIALS
+                                 2 RESOURCE_LEAK
+                                 1 RISKY_CRYPTO
+                                 1 SIGMA.weak_hash
+                                 1 WEAK_PASSWORD_HASH
+Additional defects, SpotBugs   : 2
+
+Analysis summary after merging defects:
+    HIGH SEVERITY:   3 issue(s)
+    MEDIUM SEVERITY: 3 issue(s)
+    LOW SEVERITY:    2 issue(s)
+    AUDIT SEVERITY:  0 issue(s)
+[INFO] Analyze phase took 21.127s.
+[INFO] Committing analysis results using Coverity Commit version 2024.12.0
+[INFO] Executing command: /datadrive/work/coverity/cov-analysis-linux64-2024.12.0/bin/cov-commit-defects --dir /home/giwoong/labs/java-example-project/idir --url https://demo.coverity.synopsys.com:443 --stream java-example-project --on-new-cert distrust --ticker-mode no-spin --auth-key-file /home/giwoong/.coverity/authkeys/ak-demo.coverity.synopsys.com-443
+Coverity Defect Commit Client version 2024.12.0 on Linux 6.8.0-1021-azure x86_64
+Internal version numbers: 1698eb2daa p-2024.12-push-32
+
+[STATUS] 2025-03-12 12:41:29 UTC - Committing 6 defect files...
+|0----------25-----------50----------75---------100|
+****************************************************
+[STATUS] 2025-03-12 12:41:30 UTC - Committing 14 file descriptions...
+|0----------25-----------50----------75---------100|
+****************************************************
+[STATUS] 2025-03-12 12:41:30 UTC - Committing 14 source files...
+|0----------25-----------50----------75---------100|
+****************************************************
+[STATUS] 2025-03-12 12:41:31 UTC - Committing 7 cross-reference bundles...
+|0----------25-----------50----------75---------100|
+****************************************************
+[STATUS] 2025-03-12 12:41:31 UTC - Committing 16 functions...
+|0----------25-----------50----------75---------100|
+****************************************************
+[STATUS] 2025-03-12 12:41:31 UTC - Committing 6 defect files...
+|0----------25-----------50----------75---------100|
+****************************************************
+[STATUS] 2025-03-12 12:41:32 UTC - Committing 8 output files...
+|0----------25-----------50----------75---------100|
+****************************************************
+[STATUS] 2025-03-12 12:41:32 UTC - Sending hashes for 54 summaries...
+|0----------25-----------50----------75---------100|
+****************************************************
+[STATUS] 2025-03-12 12:41:32 UTC - Committing 27 summaries...
+|0----------25-----------50----------75---------100|
+****************************************************
+New snapshot ID 141350 added.
+Elapsed time: 00:00:05
+Results are available at https://demo.coverity.synopsys.com:443/query/defects.htm?stream=java-example-project&outstanding=true
+[INFO] Commit phase took 6.83s.
+[INFO] Scan complete.
