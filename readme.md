@@ -12,7 +12,7 @@ capture:
 
 ```
 ```sh
-coverity scan
+coverity capture
 ```
 ## console output
 [coverity-cli-console.log](coverity-cli-console.log)
