@@ -9,18 +9,7 @@ capture:
   build:
     clean-command: ./gradlew clean
     build-command: ./gradlew build
-# Specifies where the analysis results should be sent.
-commit:
 
-  # Coverity Connect configuration to use when committing defects to Coverity
-  # Connect.
-  connect:
-
-    # The name of the stream to commit the results to.
-    stream: java-example-project
-
-    # Absolute URL of where to commit the Coverity Connect results.
-    url: https://demo.coverity.synopsys.com:443
 ```
 ```sh
 coverity scan
